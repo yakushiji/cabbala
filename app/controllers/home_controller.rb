@@ -34,8 +34,8 @@ class HomeController < ApplicationController
     karma_number = year.to_i + month.to_i + day.to_i
     karma_number_sum = 0
 
-    while karma_number.to_s.length > 1
-      karma_number = karma_number.split('')
+    while (karma_number.to_s.length > 1 and karma_number != 11 and karma_number != 22)
+      karma_number = karma_number.to_s.split('')
       karma_number.each{|x| karma_number_sum += x.to_i}
       karma_number = karma_number_sum
       karma_number_sum = 0
