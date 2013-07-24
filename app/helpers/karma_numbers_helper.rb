@@ -1,0 +1,2 @@
+module KarmaNumbersHelper
+end

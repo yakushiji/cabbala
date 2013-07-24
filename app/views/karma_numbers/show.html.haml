@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Description:
+  = @karma_number.description
+%p
+  %b Number:
+  = @karma_number.number
+
+= link_to 'Edit', edit_karma_number_path(@karma_number)
+\|
+= link_to 'Back', karma_numbers_path

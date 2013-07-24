@@ -1,0 +1,21 @@
+%h1 Listing karma_numbers
+
+%table
+  %tr
+    %th Description
+    %th Number
+    %th
+    %th
+    %th
+
+  - @karma_numbers.each do |karma_number|
+    %tr
+      %td= karma_number.description
+      %td= karma_number.number
+      %td= link_to 'Show', karma_number
+      %td= link_to 'Edit', edit_karma_number_path(karma_number)
+      %td= link_to 'Destroy', karma_number, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Karma number', new_karma_number_path
