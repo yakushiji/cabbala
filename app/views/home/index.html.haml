@@ -1,6 +1,6 @@
 %h2 Cabbla
-%form(action="/result" method="get")
-  = text_field_tag :year
-  = text_field_tag :month
-  = text_field_tag :day
+= form_tag('/result', :method => :get) do
+  = select :year, :name, [1,2,3.4]
+  = select :month, :name, [1,2,3,4]
+  = select :day, :name, [1,2,3,4]
   = submit_tag "submit"
