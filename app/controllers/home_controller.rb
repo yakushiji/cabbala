@@ -3,29 +3,30 @@ class HomeController < ApplicationController
   end
 
   def result
-    year = params[:year]
-    month = params[:month]
-    day = params[:day]
+    year = params[:date][:year].to_i 
+    month = params[:date][:month].to_i 
+    day = params[:date][:day].to_i
+
     year_sum = 0
     month_sum = 0
     day_sum = 0
     
-    while year.length > 1
-      year = year.split('')
+    while year.to_s.length > 1
+      year = year.to_s.split('')
       year.each{|x| year_sum += x.to_i}
       year = year_sum.to_s
       year_sum = 0
     end
 
-    while month.length > 1
-      month = month.split('')
+    while month.to_s.length > 1
+      month = month.to_s.split('')
       month.each{|x| month_sum += x.to_i}
       month = month_sum.to_s
       month_sum = 0
     end
 
-    while day.length > 1
-      day = day.split('')
+    while day.to_s.length > 1
+      day = day.to_s.split('')
       day.each{|x| day_sum += x.to_i}
       day = day_sum.to_s
       day_sum = 0
