@@ -8,8 +8,14 @@ body
   margin: 0 auto
   background-image: image-url('background.jpg')
   header
+    background-image: image-url('x.jpg')
+    background-position: top left
+    background-repeat: no-repeat
     margin-top: 30px
+    margin-left: -2px
     padding: 0 0 0 30px
+    z-index: 2
+    position: relative
     h1.title
       font-family: "Arial"
       font-size: 80px
@@ -22,22 +28,22 @@ body
         &:visited
           color: $light-glay
   .container
-    background-image: image-url('x.jpg'),image-url('y.jpg')
+    background-image: image-url('y.jpg')
     background-repeat: no-repeat
-    background-position: top left,bottom right
+    background-position: bottom right
     border-bottom: 1px solid $light-glay
     border-left: 1px solid $light-glay
     font-family: "ヒラギノ明朝 Pro W3","Hiragino Mincho Pro"
     padding: 70px 0 100px 30px
     color: $light-glay
     margin-top: -70px
-    .state
-      font-size: 20px
-      margin: 0 0 30px
+    position: relative
+    z-index: 0
     .form
+      margin-top: 15px
       select
         height: 30px
-    .number
+    .state,.number
       margin: 20px 0 30px
       font-size: 22px
       span.orange
@@ -48,10 +54,15 @@ body
       line-height: 1.5em
     .time
       display: none
-.minus
-  margin-top: -1px
-  margin-left: -30px
-  width: 30px
-  height: 150px
-  border-top: 1px solid $glay
-  border-right: 1px solid $glay
+  .minus
+    margin-top: -1px
+    margin-left: -30px
+    width: 30px
+    height: 150px
+    border-top: 1px solid $glay
+    border-right: 1px solid $glay
+  .test
+    width: 30px
+    height: 5px
+    background-image: image-url('y.jpg')
+    background-repeat: no-repeat

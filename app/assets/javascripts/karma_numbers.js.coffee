@@ -3,3 +3,4 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
   $("body").append '<div class="minus"></div>'
+  $("body").append '<span class="test"></span>'
