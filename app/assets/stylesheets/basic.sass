@@ -1,0 +1,57 @@
+@import compass/reset
+@import compass/utilities
+@import compass/css3
+@import mixins.sass
+
+body
+  width: 768px
+  margin: 0 auto
+  background-image: image-url('background.jpg')
+  header
+    margin-top: 30px
+    padding: 0 0 0 30px
+    h1.title
+      font-family: "Arial"
+      font-size: 80px
+      color: $white
+      letter-spacing: -2.0px
+      a
+        text-decoration: none
+        &:link
+          color: $light-glay
+        &:visited
+          color: $light-glay
+  .container
+    background-image: image-url('x.jpg'),image-url('y.jpg')
+    background-repeat: no-repeat
+    background-position: top left,bottom right
+    border-bottom: 1px solid $light-glay
+    border-left: 1px solid $light-glay
+    font-family: "ヒラギノ明朝 Pro W3","Hiragino Mincho Pro"
+    padding: 70px 0 100px 30px
+    color: $light-glay
+    margin-top: -70px
+    .state
+      font-size: 20px
+      margin: 0 0 30px
+    .form
+      select
+        height: 30px
+    .number
+      margin: 20px 0 30px
+      font-size: 22px
+      span.orange
+        font-size: 40px
+        color: $orange
+    .description
+      font-size: 15px
+      line-height: 1.5em
+    .time
+      display: none
+.minus
+  margin-top: -1px
+  margin-left: -30px
+  width: 30px
+  height: 150px
+  border-top: 1px solid $glay
+  border-right: 1px solid $glay

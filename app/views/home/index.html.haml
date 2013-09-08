@@ -1,6 +1,8 @@
-%h2 Cabbla
+.state
+  生年月日から10秒で運勢を占う
 .time
   = time = Time.now()
-= form_tag('/result', :method => :get) do
-  = select_date(time,{:use_month_numbers => true, :start_year => Time.now.year - 50,:end_year =>  Time.now.year + 1  }) 
-  = submit_tag "submit"
+.form
+  = form_tag('/result', :method => :get) do
+    = select_date(time,{:use_month_numbers => true, :start_year => Time.now.year - 50,:end_year =>  Time.now.year + 1  }) 
+    = submit_tag "submit"

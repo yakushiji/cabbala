@@ -6,5 +6,7 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    = yield
-    = debug(params)
+    %header
+      %h1.title= link_to "Cabbala", root_path
+    .container
+      = yield
